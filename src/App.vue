@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <Header title="Task Tracker" @toggle-add-task="toggleAddTask" :showAddTask="showAddTask"/>
+    <Header
+      title="Task Tracker"
+      @toggle-add-task="toggleAddTask"
+      :showAddTask="showAddTask"
+    />
     <router-view :showAddTask="showAddTask"></router-view>
     <Footer />
   </div>
@@ -11,33 +15,33 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
-    Footer
-},
+    Footer,
+  },
   data() {
     return {
-      showAddTask: false
-    }
+      showAddTask: false,
+    };
   },
   methods: {
     toggleAddTask() {
-      this.showAddTask = !this.showAddTask
+      this.showAddTask = !this.showAddTask;
     },
-  }
-}
+  },
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .container {
   max-width: 500px;
